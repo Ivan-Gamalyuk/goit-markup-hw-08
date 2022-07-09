@@ -1,0 +1,47 @@
+
+.business{
+    background: #2F303A;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), url(../img/photo_bg.jpg);
+    max-width: 1600px;  
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}                                        
+.main-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    color:var(--second-title-color);
+    text-align: center;
+    margin-bottom: 30px;
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.business-btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    min-width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #FFFFFF;
+    transition: color 250ms linear, background 250ms linear ;
+    border: transparent;
+    &:hover,
+    &:focus {
+        background: var(--btn-color);
+    }
+} 

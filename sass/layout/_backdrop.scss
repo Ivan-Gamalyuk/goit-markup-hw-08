@@ -1,0 +1,245 @@
+
+.backdrop {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+
+.modal {
+    width: 528px;
+    min-height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    transition: transform 250ms linear;
+    padding: 40px;
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    
+}
+
+.window-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        border: 1px solid #2196F3;
+    }
+}
+
+
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.close-icon {
+    fill: #000;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .window-btn:hover & {
+        fill: #2196F3;
+    }
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 12px;
+}
+
+.container-form {
+    margin-bottom: 10px;
+}
+
+
+
+.modal-input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    margin-top: 4px;
+    background-color: transparent;
+    height: 40px;
+    padding-left: 42px;
+    outline: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+    
+    border: 1px solid #2196F3;
+    
+
+    }
+}
+
+
+
+
+.modal-label {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+    
+}
+
+.modal-textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    margin-top: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+    border: 1px solid #2196F3;
+
+    }
+    &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    
+    }
+}
+
+
+
+
+.input-wrap{
+    position: relative;
+}
+
+.form-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal-input:focus + &,
+    .modal-input:hover + &{
+        fill: #2196F3;
+    }
+}
+
+.modal-field {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-check{ 
+    background: #212121;
+    &:focus {
+        outline: 1px solid #2196F3;
+        border: #2196F3;
+    }
+}
+
+
+.label-check   {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+    display: flex;
+    align-items: center;
+}
+.label-link {
+    color: #2196F3;
+}
+.label-check span {
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .input-check:checked + & {
+        background-color: #2196F3;
+        border: none;
+    }
+}
+.check-icon {
+    fill: transparent;
+    .input-check:checked + .label-check & {
+        fill: #FFFFFF;
+    }
+    
+}
+
+
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.form-btn {
+    width:200px;
+    height: 50px;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    align-self: center;
+    margin: 0 auto;
+
+
+}
