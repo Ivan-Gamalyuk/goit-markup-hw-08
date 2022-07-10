@@ -1,4 +1,8 @@
 
+.business__container {
+    min-width: 100%;
+    padding: 0;
+}
 .business{
     background: #2F303A;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
@@ -8,13 +12,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    // padding-top: 200px;
+    // padding-bottom: 200px;
+    padding: 118px 60px;
+    
 }                                        
 .main-title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     color:var(--second-title-color);
     text-align: center;
     margin-bottom: 30px;

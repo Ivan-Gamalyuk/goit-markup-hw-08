@@ -294,6 +294,11 @@ body {
   fill: var(--btn-color);
 }
 
+.business__container {
+  min-width: 100%;
+  padding: 0;
+}
+
 .business {
   background: #2F303A;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/photo_bg.jpg);
@@ -302,14 +307,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 60px;
 }
 
 .main-title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   color: var(--second-title-color);
   text-align: center;
   margin-bottom: 30px;
@@ -340,22 +344,18 @@ body {
 }
 
 .skills {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .skills {
+    max-width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
-.option__list {
-  display: flex;
-}
-
-.option__item {
-  width: 270px;
-}
-.option__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.option__title {
+.option-soc__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -365,7 +365,7 @@ body {
   margin-bottom: 10px;
 }
 
-.option__text {
+.option-soc__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -375,18 +375,27 @@ body {
 .option-soc__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .option-soc__item {
-  width: 270px;
+  width: 100%;
   height: 120px;
   background: #F5F4FA;
   border-radius: 4px;
-  margin-bottom: 30px;
-  margin-left: 30px;
 }
-.option-soc__item:first-child {
-  margin-left: 0px;
+@media screen and (min-width: 768px) {
+  .option-soc__item {
+    max-width: 768px;
+    flex-basis: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .option-soc__item {
+    max-width: 1200px;
+    flex-basis: calc(25% - 30px);
+  }
 }
 
 .option-soc__container {
@@ -395,6 +404,7 @@ body {
   height: 100%;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .work {
@@ -567,8 +577,8 @@ body {
 
 .customers-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -586,14 +596,9 @@ body {
 .customers-item {
   height: 92px;
   width: 100%;
+  width: calc((100% - 30px) / 2);
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-}
-@media screen and (min-width: 480px) {
-  .customers-item {
-    max-width: 480px;
-    flex-basis: calc(50% - 30px);
-  }
 }
 @media screen and (min-width: 768px) {
   .customers-item {
