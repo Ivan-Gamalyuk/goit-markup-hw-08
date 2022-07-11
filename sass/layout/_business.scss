@@ -1,34 +1,49 @@
 
-.business__container {
+.business .container {
     min-width: 100%;
     padding: 0;
 }
 .business{
     background: #2F303A;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), url(../img/photo_bg.jpg);
+    rgba(47, 48, 58, 0.4)), url(../img/business-mob.jpg);
     max-width: 1600px;  
     margin: 0px auto;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    // padding-top: 200px;
-    // padding-bottom: 200px;
-    padding: 118px 60px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
     
+    @media screen and (min-width: 768px) {
+        
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)), url(../img/business-tablet.jpg);
+    }
+    @media screen and (min-width: 1200px) {
+        
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)), url(../img/photo_bg.jpg);
+    }
+
 }                                        
 .main-title {
     font-weight: 900;
     font-size: 26px;
     line-height: 1.61;
     color:var(--second-title-color);
-    text-align: center;
+    // text-align: center;
     margin-bottom: 30px;
-    width: 696px;
-    margin-left: auto;
-    margin-right: auto;
+    // width: 696px;
+    // margin-left: auto;
+    // margin-right: auto;
+    text-transform: uppercase;
+    @media  screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
-
 
 .business-btn {
     font-family: 'Roboto';

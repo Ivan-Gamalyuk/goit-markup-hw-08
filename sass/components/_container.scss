@@ -12,5 +12,19 @@
     @media screen and (min-width: 1200px)  {
       max-width:  1200px;
     }
-    
+    @mixin mobile  { 
+      @media screen and ( max-width: 480px) {
+          @content;
+      } 
+  }
+  @mixin tablet  { 
+      @media screen and ( max-width: 768px) {
+          @content;
+      } 
+  }
+  @mixin desktop  { 
+      @media screen and ( max-width: 1200px) {
+          @content;
+      } 
+  }
   } 
