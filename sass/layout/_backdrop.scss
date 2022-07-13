@@ -11,8 +11,8 @@
 
 
 .modal {
-    width: 528px;
-    min-height: 581px;
+    width: 450px;
+    min-height: 609px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -25,7 +25,10 @@
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);
     }
-    
+    @media screen and (min-width: 1200px)  {
+        width: 528px;
+        min-height: 581px;
+    }
 }
 
 .window-btn {
@@ -66,11 +69,14 @@
 .modal-title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.50;
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
     margin-bottom: 12px;
+    @media screen and (min-width: 1200px)  {
+        line-height: 1.15;
+    }
 }
 
 .container-form {
@@ -175,12 +181,16 @@
 
 .label-check   {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    font-size: 12px;
+    line-height: 1.17;
     color: #757575;
     display: flex;
     align-items: center;
+    @media screen and (min-width: 1200px)  {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+}
 }
 .label-link {
     color: #2196F3;
