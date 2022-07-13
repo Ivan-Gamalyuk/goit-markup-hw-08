@@ -4,16 +4,30 @@
     padding-bottom: 60px; 
     
 }
+
+.footer-logo {
+    margin-right: 0px;
+}
 .footer-container {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // align-items: baseline;
+    text-align: center;
+    @media screen and (min-width: 1200px){
+        display: flex;
+        align-items: baseline;
+        text-align: start;
+    }
 }
 .address-container {
-    margin-right: 70px;
+    // margin-right: 70px;
 }
 
 .footer-list {
     margin-top: 20px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0px;
+    }
 }
 
 .footer-link-place {
@@ -53,6 +67,17 @@
     margin-bottom: 9px;
 
 } 
+
+.flex__container {
+    @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    }
+    @media screen and (min-width: 1200px){
+        align-items: baseline;
+        margin-right: auto;
+    }
+}
 .join-title {
     font-weight: 700;
     font-size: 14px;
@@ -99,12 +124,34 @@
 
 
 .join {
-    margin-right: 93px;
+    // margin-right: 93px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px){
+        margin-left: 70px;
+        margin-bottom: 0px;
+    }
+
 }
+
+// .sub-footer {
+//     @media screen and (min-width: 1200px) {
+//         margin: 0 auto;
+//     }
+// }
 
 .footer-form {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0px;
+    }
 }
 
 .footer-input {
@@ -112,10 +159,10 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: #2F303A;
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding-left: 16px;
-    margin-right: 12px;
+    // margin-right: 12px;
     &::placeholder {
         font-weight: 400;
         font-size: 16px;
@@ -124,6 +171,15 @@
         align-items: center;
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.6);
+    }
+    @media screen and (min-width: 768px)  {
+        width: 450px;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-bottom: 0px;
+        width: 358px;
+        margin-right: 12px;
     }
 }
 .form-btn {
@@ -153,4 +209,3 @@
     
     
 }
-
