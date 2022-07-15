@@ -409,6 +409,7 @@ body {
   height: 100vh;
   padding: 48px 25px;
   overflow: auto;
+  transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .mob-menu .container {
