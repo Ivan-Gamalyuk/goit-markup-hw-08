@@ -1,5 +1,10 @@
 .work {
     padding-bottom: 94px;
+    display: none ;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+
 }
 .work-title {
     font-weight: 700;
@@ -9,14 +14,15 @@
     color: var(--title-color);
     margin-bottom: 50px;
     text-align: center;
+    // display: none;
 }   
 .work-list {
-    display: none;
-    @media screen and (min-width: 1200px) {
-        display: flex;
+    // display: none;
+    // @media screen and (min-width: 1200px) {
+    //     display: flex;
+    display: flex;
     }
 
-}
 .work-item:not(:last-child) {
     margin-right: 30px;
 
